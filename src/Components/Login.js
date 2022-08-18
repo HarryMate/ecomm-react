@@ -7,8 +7,8 @@ const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
-    
 
+    //Create a new user using the given information on Firebase then redirect to the home page
     const handleRegister = e => {
         e.preventDefault()
         auth.createUserWithEmailAndPassword(email, password).then((auth) => {
@@ -17,11 +17,16 @@ const Login = () => {
             .catch(error => console.log(error.message))
     }
 
+    //Login the user using the given information, if they are an admin, send them to the admin dashboard, otherwise the home page
     const handleLogin = (e) => {
         e.preventDefault()
 
         auth.signInWithEmailAndPassword(email, password).then(user => {
-            navigate('/')
+            if (email == 'admin@admin.com') {
+                navigate('/admin')
+            } else {
+                navigate('/')
+            }
         })
             .catch(error => console.log(error.message))
     }

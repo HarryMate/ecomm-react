@@ -10,6 +10,7 @@ const Header = () => {
     const [user, setUser] = useContext(Context)
     const navigate = useNavigate()
 
+    //Sign out the user and set the current user to NULL, then redirect to the login page
     const logout = async () => {
         await auth.signOut()
         setUser(null)
@@ -28,6 +29,7 @@ const Header = () => {
                 <input type="text" className='search_input' />
                 <SearchIcon className='search_icon' />
             </div>
+            {/* If there is a user logged in, show the logout button, otherwise show the login button */}
             <Link className='option' to={!user && '/login'}>
                 <div onClick={logout}>{user ? 'Logout' : 'Login'}</div>
             </Link>

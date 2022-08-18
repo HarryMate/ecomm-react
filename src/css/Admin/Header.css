@@ -1,0 +1,27 @@
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #2a77db;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main {
+    font-size: 22px !important;
+}
+
+.option {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.right {
+    margin-left: auto;
+}
