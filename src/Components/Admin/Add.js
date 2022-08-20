@@ -8,7 +8,7 @@ const Add = () => {
   //States for each part of the product info
   const [Name, setName] = useState('')
   const [Price, setPrice] = useState('')
-  const [Rating, setRating] = useState('')
+  const [Rated, setRated] = useState()
   const [Image, setImage] = useState('')
 
   const navigate = useNavigate()
@@ -16,6 +16,8 @@ const Add = () => {
   //Grab all of the information from the states and place it into an object
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    const Rating = Number(Rated)
 
     const product = {
       Name,
@@ -36,7 +38,7 @@ const Add = () => {
         <h5>Price</h5>
         <input type="number" step="any" min={0.01} required onChange={e => setPrice(e.target.value)} />
         <h5>Rating</h5>
-        <input type="number" min={1} max={5} required onChange={e => setRating(e.target.value)} />
+        <input type="number" min={1} max={5} required onChange={e => setRated(e.target.value)} />
         <h5>Image Link</h5>
         <input type="text" required onChange={e => setImage(e.target.value)} />
         <button type='submit'>Add Product</button>
