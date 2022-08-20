@@ -33,10 +33,11 @@ const Product = ({ product, home }) => {
                     ?
                     <button className='button'>Add to Basket</button>
                     :
-                    <>
-                        Remove?<input type="checkbox" className='removeBox' onClick={setChecked} />
+                    <div className='admin'>
+                        <p>Remove?</p>
+                        <input type="checkbox" className='removeBox' onClick={setChecked} />
                         <button className='button' onClick={handleDelete} disabled={disable} >Delete Item</button>
-                    </>
+                    </div>
                 }
             </div>
         </>
