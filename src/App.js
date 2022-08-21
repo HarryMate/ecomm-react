@@ -11,6 +11,7 @@ import Add from './Components/Admin/Add';
 import Remove from './Components/Admin/Remove';
 import Edit from './Components/Admin/Edit';
 import AdminHeader from './Components/Admin/Header'
+import Editing from './Components/Admin/Editing';
 
 function App() {
   const [user, setUser] = useContext(Context)
@@ -69,6 +70,13 @@ function App() {
             <>
               <AdminHeader />
               <Edit />
+            </>
+          }>
+          </Route>
+          <Route path='/admin/editing' element={
+            <>
+              <AdminHeader />
+              <Editing />
             </>
           }>
           </Route>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { db } from '../Firebase'
 import '../css/Product.css'
+import { useNavigate } from 'react-router-dom'
 
-const Product = ({ product, home }) => {
+const Product = ({ product, home, remove }) => {
+    const navigate = useNavigate()
     const [disable, setDisable] = useState(true)
 
     //Access the product with its ID then delete it from the database
@@ -14,6 +16,11 @@ const Product = ({ product, home }) => {
     //Done to ensure a product is not deleted by mistake
     const setChecked = () => {
         setDisable(!disable)
+    }
+
+    //When the Edit Product button is clicked it will take them to a form page and pass in the values of the product
+    const handleEdit = () => {
+        navigate('/admin/editing', {state:{product: product}})
     }
 
     return (
@@ -28,15 +35,22 @@ const Product = ({ product, home }) => {
                         ))}</div>
                 </div>
                 <img className='img' src={product.data.Image} alt={product.data.Title} />
-                {/* If one the home page, show the add to basket button, if on the admin page, show the delete item button */}
+                {/* If on the home page show the Add to Basket Button*/}
                 {home
                     ?
                     <button className='button'>Add to Basket</button>
                     :
-                    <div className='admin'>
+                    //If on the remove page, show the remove delete item button and checkbox
+                    remove ?
+                    <div className='remove'>
                         <p>Remove?</p>
                         <input type="checkbox" className='removeBox' onClick={setChecked} />
                         <button className='button' onClick={handleDelete} disabled={disable} >Delete Item</button>
+                    </div>
+                    //If on the edit page, show the edit product button
+                    :
+                    <div className="edit">
+                        <button className='button' onClick={handleEdit}>Edit Product</button>
                     </div>
                 }
             </div>

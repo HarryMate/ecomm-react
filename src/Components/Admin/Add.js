@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../../css/Admin/Add.css'
 import { db } from '../../Firebase'
-import { addDoc, collection, doc, setDoc } from 'firebase/firestore'
+import { addDoc, collection } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 
 const Add = () => {

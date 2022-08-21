@@ -40,12 +40,12 @@
     margin-bottom: 15px;
 }
 
-.admin {
+.remove {
     display: flex;
     justify-content: center;
 }
 
-.admin > input {
+.remove > input {
     margin-left: 10px;
     margin-right: 10px;
 }

@@ -3,7 +3,7 @@ import '../../css/Admin/Remove.css'
 import { db } from '../../Firebase'
 import Product from '../Product'
 
-//This page is almost the same as the home page, the only difference is not passing a prop to the products so that code uses the admin code instead
+//This page is almost the same as the home page, the only difference is not passing a prop to the products so that code uses the remove code instead
 
 const Remove = () => {
   const [product, setProduct] = useState([])
@@ -23,7 +23,7 @@ const Remove = () => {
       <div className='row'>
         {/* One product component is rendered per item in the useState array and its data is passed to the component as a prop*/}
         {product?.map(product => (
-          <Product key={product.id} product={product} />
+          <Product key={product.id} product={product} remove={true} />
         ))}
       </div>
     </div>
