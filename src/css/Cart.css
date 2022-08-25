@@ -1,0 +1,40 @@
+.cart {
+    display: flex;
+    height: max-content;
+}
+
+.cartItems {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartItems>h2 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.singleProduct {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartButton {
+    background: #417dff;
+    border: 1px solid;
+    border-color: #1a62ff;
+    margin-top: 10px;
+    color: white;
+    border-radius: 10px;
+    max-width: 200px;
+    width: 100%;
+    height: 40px;
+    margin-left: 235px;
+    margin-bottom: 40px;
+    margin-top: -60px;
+    justify-items: left;
+}
+
+.subtotalRight {
+    width: 30%;
+}

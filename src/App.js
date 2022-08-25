@@ -12,16 +12,19 @@ import Remove from './Components/Admin/Remove';
 import Edit from './Components/Admin/Edit';
 import AdminHeader from './Components/Admin/Header'
 import Editing from './Components/Admin/Editing';
+import Cart from './Components/Cart';
+import CartWait from './Components/CartWait';
 
 function App() {
-  const [user, setUser] = useContext(Context)
+  const {userState} = useContext(Context)
+  const [user, setUser] = userState
 
   //Check if the state has a user, if not then check if there is one logged in on firebase, if there is then change the state
   if (!user) {
     auth.onAuthStateChanged((currentUser) => {
       if (currentUser) {
         //console.log('user is logged')
-        setUser(currentUser)
+        setUser(currentUser._delegate)
         //console.log(user)
       }
     })
@@ -42,6 +45,13 @@ function App() {
             <>
               <Header />
               <Login />
+            </>
+          }>
+          </Route>
+          <Route path='/cart' element={
+            <>
+              <Header />
+              <CartWait />
             </>
           }>
           </Route>

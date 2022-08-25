@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 const Add = () => {
   //States for each part of the product info
   const [Name, setName] = useState('')
-  const [Price, setPrice] = useState('')
+  const [Cost, setCost] = useState('')
   const [Rated, setRated] = useState()
   const [Image, setImage] = useState('')
 
@@ -18,6 +18,7 @@ const Add = () => {
     e.preventDefault()
 
     const Rating = Number(Rated)
+    const Price = Number(Cost)
 
     const product = {
       Name,
@@ -36,7 +37,7 @@ const Add = () => {
         <h5>Name</h5>
         <input type="text" required onChange={e => setName(e.target.value)} />
         <h5>Price</h5>
-        <input type="number" step="any" min={0.01} required onChange={e => setPrice(e.target.value)} />
+        <input type="number" step="any" min={0.01} required onChange={e => setCost(e.target.value)} />
         <h5>Rating</h5>
         <input type="number" min={1} max={5} required onChange={e => setRated(e.target.value)} />
         <h5>Image Link</h5>

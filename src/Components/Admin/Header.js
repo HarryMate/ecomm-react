@@ -7,7 +7,8 @@ import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const navigate = useNavigate()
-    const [user, setUser] = useContext(Context)
+    const { userState } = useContext(Context)
+    const [user, setUser] = userState
 
     const logout = async () => {
         await auth.signOut()

@@ -38,4 +38,12 @@
 .search_icon {
     padding: 5px;
     height: 22px !important;
+    color: white;
+}
+
+.cartOption {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
 }

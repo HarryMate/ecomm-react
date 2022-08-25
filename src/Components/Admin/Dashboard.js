@@ -6,7 +6,7 @@ import '../../css/Admin/Dashboard.css'
 const Dashboard = () => {
     const navigate = useNavigate()
     auth.onAuthStateChanged((currentUser) => {
-        if (currentUser._delegate.email != 'admin@admin.com') {
+        if (currentUser.email != 'admin@admin.com') {
             navigate('/')
         }
     })

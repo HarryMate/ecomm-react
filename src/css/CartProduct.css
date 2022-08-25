@@ -1,0 +1,24 @@
+.cartProduct {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.cart_info {
+    margin-left: 40px;
+}
+
+.cart_image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.cart_rating {
+    display: flex;
+}
+
+.cart_price {
+    display: flex;
+}
