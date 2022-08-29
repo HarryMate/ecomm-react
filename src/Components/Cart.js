@@ -33,11 +33,11 @@ const Cart = () => {
         <div className="cart">
             <div className="cartItems">
                 <h2>Your Cart</h2>
+                {/* Mapping through each element in the cart and adding a 'remove a basket' button for each */}
                 {cart?.map((item, index) => (
                     <div className='singleProduct' key={index}>
                         <CartProduct
                             product={item}
-                            id={index}
                         />
                         <button className='cartButton' onClick={() => removeFromBasket(index)}>Remove from Basket</button>
                     </div>

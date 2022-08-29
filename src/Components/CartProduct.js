@@ -1,14 +1,7 @@
-import React, { useContext } from 'react'
-import { Context } from '../Context'
+import React from 'react'
 import '../css/CartProduct.css'
-import { db } from '../Firebase'
-import Cart from './Cart'
 
-const CartProduct = ({ product, index }) => {
-    const { userState, cartState } = useContext(Context)
-    const [cart, setCart] = cartState
-    const [user, setUser] = userState
-
+const CartProduct = ({ product }) => {
     return (
         <div className='cartProduct'>
             <img className='cart_image' src={product.data.product.data.Image} />

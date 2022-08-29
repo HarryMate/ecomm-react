@@ -1,0 +1,57 @@
+.payment_container {
+    display: flex;
+}
+
+.payment_left {
+    width: 70%;
+}
+
+.payment_left > h1, h2 {
+    font-weight: 400;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.payment_right_text {
+    font-weight: 400;
+    text-align: left;
+}
+
+.payment_address {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 66px;
+}
+
+.payment_address > input {
+    height: 30px;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+
+.payment_address > h3 {
+    margin-bottom: -10px;
+}
+
+.card {
+    width: 500px;
+}
+
+.button:disabled {
+    background: lightgray;
+    border-radius: 10px;
+    width: 60%;
+    height: 30px;
+    border: 2px solid rgb(204, 203, 203);
+    margin-top: 20px;
+    color: rgb(122, 122, 122);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.divider {
+    border-top: 2px;
+    color: darkgray;
+}

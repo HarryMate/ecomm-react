@@ -2,12 +2,12 @@ import React from 'react'
 import CurrencyFormat from 'react-currency-format'
 import { useNavigate } from 'react-router-dom'
 import '../css/Subtotal.css'
+import { getCartTotal } from '../Context'
 
 const Subtotal = (basket) => {
     const navigate = useNavigate()
+    //Converting it from an object to an array
     const cart = Object.values(basket.basket)
-
-    const getCartTotal = (total) => total?.reduce(function (amount, item) { return amount + item.data.product.data.Price }, 0)
 
     return (
         <div className='subtotal'>

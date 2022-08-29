@@ -14,9 +14,14 @@ import AdminHeader from './Components/Admin/Header'
 import Editing from './Components/Admin/Editing';
 import Cart from './Components/Cart';
 import CartWait from './Components/CartWait';
+import Payment from './Components/Payment';
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js';
+
+const promise = loadStripe('pk_test_51LSM75CYMVfwFlDLED9OUCiKG7yRY4zh3HfgzL14UW2qxvbHdftggyAaazyJjvXaHljA12L5i9hIDPluB7XYySB500zriQs3pM')
 
 function App() {
-  const {userState} = useContext(Context)
+  const { userState } = useContext(Context)
   const [user, setUser] = userState
 
   //Check if the state has a user, if not then check if there is one logged in on firebase, if there is then change the state
@@ -55,6 +60,14 @@ function App() {
             </>
           }>
           </Route>
+          <Route path='/payment' element={
+            <>
+              <Header />
+              <Elements stripe={promise}>
+                <Payment />
+              </Elements>
+            </>
+          }></Route>
           <Route path='/admin' element={
             <>
               <AdminHeader />
