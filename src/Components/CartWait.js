@@ -11,16 +11,24 @@ const CartWait = () => {
   //useLocation gets the parameters given by the previous page
   //if the 
   useEffect(() => {
-    const handleCart = async () => {
-      const getBasket = await db.collection('users').doc(user?.uid).collection('basket').get()
-      const basket = getBasket.docs.map(doc => ({
-        id: doc.id,
-        data: doc.data()
-      }))
-      setCart(basket)
+    const handleCart = () => {
+      const arr = []
+      const getBasket = db.collection('users')
+        .doc(user?.uid)
+        .collection('basket')
+        .get()
+        .then(value => {
+          value.forEach(doc => {
+            arr.push({
+              id: doc.id,
+              data: doc.data()
+            })
+          })
+          setCart(arr)
+          console.log(arr)
+        })
     }
     handleCart()
-
   }, [])
   return (
     <div>{cart && <Cart cart={cart} />}</div>
