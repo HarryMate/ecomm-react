@@ -1,0 +1,21 @@
+.dash {
+    display: flex;
+    line-height: 200px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.dash_revenue {
+    background-color: rgb(7, 248, 7);
+    width: 50%;
+    height: 200px;
+    margin-left: 50px;
+}
+
+.dash_numOrders {
+    background-color: #4a8ce2;
+    width: 50%;
+    height: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+}

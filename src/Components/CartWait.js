@@ -3,13 +3,13 @@ import { Context } from '../Context';
 import { db } from '../Firebase';
 import Cart from './Cart';
 
+//Routing straight to the cart page breaks because the content is not yet loaded, and passing the information that the useEffect gets here as a prop doesn't work either
+
 const CartWait = () => {
   const { userState, cartState } = useContext(Context)
   const [cart, setCart] = cartState
   const [user, setUser] = userState
 
-  //useLocation gets the parameters given by the previous page
-  //if the 
   useEffect(() => {
     const handleCart = () => {
       const arr = []
@@ -31,7 +31,7 @@ const CartWait = () => {
     handleCart()
   }, [])
   return (
-    <div>{cart && <Cart cart={cart} />}</div>
+    <div>{cart && <Cart />}</div>
   )
 }
 

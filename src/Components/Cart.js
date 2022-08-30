@@ -31,10 +31,10 @@ const Cart = () => {
         handleCart()
     }, [])
 
-    const removeFromBasket = async (index) => {
+    const removeFromBasket = async (index, id) => {
         setCart(cart.filter((e, i) => index !== i))
         console.log(cart)
-        //await db.collection('users').doc(user?.uid).collection('basket').doc(product.id).delete()
+        await db.collection('users').doc(user?.uid).collection('basket').doc(id).delete()
     }
 
     return (
@@ -47,7 +47,7 @@ const Cart = () => {
                         <CartProduct
                             product={item}
                         />
-                        <button className='cartButton' onClick={() => removeFromBasket(index)}>Remove from Basket</button>
+                        <button className='cartButton' onClick={() => removeFromBasket(index, item.id)}>Remove from Basket</button>
                     </div>
                 ))}
             </div>
