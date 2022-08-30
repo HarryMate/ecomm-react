@@ -48,12 +48,16 @@ const Payment = () => {
         setCart(null)
 
         //Delete all documents in the user's basket in the DB
+        //Batch operations are much faster with larger sets of data
         const batch = db.batch()
+        //Get all of the items in the user's basket
         const empty = await db.collection('users').doc(user?.uid).collection('basket').get()
             .then(value => {
+                //For each item in the basket, delete it
                 value.forEach(doc => {
                     batch.delete(doc.ref)
                 })
+                //Commit the changes
                 batch.commit()
             })
     }
@@ -88,7 +92,7 @@ const Payment = () => {
 
             emptyBasket()
 
-            navigate('/')
+            navigate('/orders')
         })
     }
 

@@ -17,6 +17,7 @@ import CartWait from './Components/CartWait';
 import Payment from './Components/Payment';
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js';
+import Orders from './Components/Orders';
 
 const promise = loadStripe('pk_test_51LSM75CYMVfwFlDLED9OUCiKG7yRY4zh3HfgzL14UW2qxvbHdftggyAaazyJjvXaHljA12L5i9hIDPluB7XYySB500zriQs3pM')
 
@@ -67,7 +68,15 @@ function App() {
                 <Payment />
               </Elements>
             </>
-          }></Route>
+          }>
+          </Route>
+          <Route path='/orders' element={
+            <>
+              <Header />
+              <Orders />
+            </>
+          }>
+          </Route>
           <Route path='/admin' element={
             <>
               <AdminHeader />
