@@ -57,3 +57,8 @@ Start Firebase Backend
 ```bash
   firebase emulators:start
 ```
+
+## Acknowledgements
+
+ - [Media Queries](https://thewebdev.info/2021/11/20/how-to-conditionally-render-items-based-on-viewport-size-in-react/) - Media Queries don't work in React, this code allows them to work
+ - [Hamburger Menu](https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/) - Code for a Hamburger menu for mobile devices
