@@ -1,0 +1,40 @@
+.menu_search {
+    display: flex;
+    align-items: center;
+}
+
+.menu_search_icon {
+    padding: 5px;
+    height: 22px !important;
+    color: black;
+}
+
+.menu_search_input {
+    height: 12px;
+    padding: 10px;
+    border: 1px solid;
+    border-color: darkgrey;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.menu_cartOption {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0D0C1D;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    @media(max-width: 576px) {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+}
+
+.menu_cartOption > div {
+    margin-left: 5px;
+}

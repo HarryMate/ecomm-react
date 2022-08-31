@@ -8,6 +8,10 @@
     display: flex;
 }
 
+.order_info_small {
+    display: inline;
+}
+
 .order_id {
     margin-left: auto;
     margin-right: 20px;

@@ -1,9 +1,13 @@
-.cart {
+.cart_large {
     display: flex;
     height: max-content;
 }
 
-.cartItems {
+.cart_small {
+    height: max-content;
+}
+
+.cartItems_large {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -37,4 +41,8 @@
 
 .subtotalRight {
     width: 30%;
+}
+
+.cart_subtotal_small {
+    text-align: center;
 }
