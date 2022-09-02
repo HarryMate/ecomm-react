@@ -264,3 +264,183 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
 [debug] [2022-08-31T13:39:24.081Z] [worker-us-central1-api-a80d0ad3-4176-4c5a-ae1e-18d6114a64ff]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a80d0ad3-4176-4c5a-ae1e-18d6114a64ff]: IDLE"}}
 [debug] [2022-08-31T13:39:24.082Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-08-31T13:45:33.650Z] [worker-us-central1-api-a80d0ad3-4176-4c5a-ae1e-18d6114a64ff]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a80d0ad3-4176-4c5a-ae1e-18d6114a64ff]: exited"}}
+[debug] [2022-08-31T13:45:33.651Z] [worker-us-central1-api-a80d0ad3-4176-4c5a-ae1e-18d6114a64ff]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a80d0ad3-4176-4c5a-ae1e-18d6114a64ff]: FINISHED"}}
+[debug] [2022-08-31T13:45:33.658Z] [worker-us-central1-api-2d312475-174e-4145-8e9f-ea0eff88f31b]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-2d312475-174e-4145-8e9f-ea0eff88f31b]: exited"}}
+[debug] [2022-08-31T13:45:33.658Z] [worker-us-central1-api-2d312475-174e-4145-8e9f-ea0eff88f31b]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-2d312475-174e-4145-8e9f-ea0eff88f31b]: FINISHED"}}
+[debug] [2022-09-01T12:09:32.295Z] ----------------------------------------------------------------------
+[debug] [2022-09-01T12:09:32.297Z] Command:       F:\nodejs\node.exe C:\Users\Harry\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-09-01T12:09:32.298Z] CLI Version:   11.8.0
+[debug] [2022-09-01T12:09:32.298Z] Platform:      win32
+[debug] [2022-09-01T12:09:32.298Z] Node Version:  v16.14.2
+[debug] [2022-09-01T12:09:32.299Z] Time:          Thu Sep 01 2022 13:09:32 GMT+0100 (British Summer Time)
+[debug] [2022-09-01T12:09:32.300Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-01T12:09:32.303Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-09-01T12:09:32.378Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-01T12:09:32.378Z] > authorizing via signed-in user (heychmt@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project ecomm-react-2ca49. This may result in unexpected behavior. 
+[debug] [2022-09-01T12:09:32.409Z] [hub] writing locator at C:\Users\Harry\AppData\Local\Temp\hub-ecomm-react-2ca49.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, eventarc\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-09-01T12:09:32.484Z] defaultcredentials: writing to file C:\Users\Harry\AppData\Roaming\firebase\heychmt_gmail_com_application_default_credentials.json
+[debug] [2022-09-01T12:09:32.491Z] Setting GAC to C:\Users\Harry\AppData\Roaming\firebase\heychmt_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Harry\\AppData\\Roaming\\firebase\\heychmt_gmail_com_application_default_credentials.json"}}
+[debug] [2022-09-01T12:09:32.492Z] > refreshing access token with scopes: []
+[debug] [2022-09-01T12:09:32.493Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-09-01T12:09:32.493Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-01T12:09:32.700Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-09-01T12:09:32.700Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-01T12:09:32.709Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig [none]
+[debug] [2022-09-01T12:09:32.751Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-09-01T12:09:32.752Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-09-01T12:09:32.984Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig 200
+[debug] [2022-09-01T12:09:32.984Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig {"projectId":"ecomm-react-2ca49","databaseURL":"https://ecomm-react-2ca49-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"ecomm-react-2ca49.appspot.com","locationId":"europe-west"}
+[debug] [2022-09-01T12:09:33.007Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-09-01T12:09:33.008Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-09-01T12:09:33.008Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Harry\\.cache\\firebase\\emulators\\ui-v1.9.0\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Harry\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.9.0\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-09-01T12:09:33.179Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "F:\webdev\ecomm-react\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"F:\\webdev\\ecomm-react\\functions\" for Cloud Functions..."}}
+[debug] [2022-09-01T12:09:33.285Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-09-01T12:09:39.982Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-01T12:09:39.982Z] Building nodejs source
+[debug] [2022-09-01T12:09:39.982Z] Analyzing nodejs backend spec
+[debug] [2022-09-01T12:09:39.984Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-01T12:09:43.752Z] Serving at port 9005
+
+[debug] [2022-09-01T12:09:45.895Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-01T12:09:45.899Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5001/ecomm-react-2ca49/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/ecomm-react-2ca49/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-09-01T13:03:21.380Z] Received signal SIGHUP 1
+[debug] [2022-09-02T12:07:03.677Z] ----------------------------------------------------------------------
+[debug] [2022-09-02T12:07:03.678Z] Command:       F:\nodejs\node.exe C:\Users\Harry\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-09-02T12:07:03.678Z] CLI Version:   11.8.0
+[debug] [2022-09-02T12:07:03.678Z] Platform:      win32
+[debug] [2022-09-02T12:07:03.678Z] Node Version:  v16.14.2
+[debug] [2022-09-02T12:07:03.680Z] Time:          Fri Sep 02 2022 13:07:03 GMT+0100 (British Summer Time)
+[debug] [2022-09-02T12:07:03.680Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-02T12:07:03.729Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-02T12:07:03.730Z] > authorizing via signed-in user (heychmt@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project ecomm-react-2ca49. This may result in unexpected behavior. 
+[debug] [2022-09-02T12:07:03.860Z] [hub] writing locator at C:\Users\Harry\AppData\Local\Temp\hub-ecomm-react-2ca49.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, eventarc\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-09-02T12:07:03.888Z] defaultcredentials: writing to file C:\Users\Harry\AppData\Roaming\firebase\heychmt_gmail_com_application_default_credentials.json
+[debug] [2022-09-02T12:07:03.889Z] Setting GAC to C:\Users\Harry\AppData\Roaming\firebase\heychmt_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Harry\\AppData\\Roaming\\firebase\\heychmt_gmail_com_application_default_credentials.json"}}
+[debug] [2022-09-02T12:07:03.890Z] > refreshing access token with scopes: []
+[debug] [2022-09-02T12:07:03.891Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-09-02T12:07:03.891Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-02T12:07:04.068Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-09-02T12:07:04.068Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-02T12:07:04.076Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig [none]
+[debug] [2022-09-02T12:07:04.333Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig 200
+[debug] [2022-09-02T12:07:04.333Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig {"projectId":"ecomm-react-2ca49","databaseURL":"https://ecomm-react-2ca49-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"ecomm-react-2ca49.appspot.com","locationId":"europe-west"}
+[debug] [2022-09-02T12:07:04.347Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-09-02T12:07:04.347Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-09-02T12:07:04.347Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Harry\\.cache\\firebase\\emulators\\ui-v1.9.0\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Harry\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.9.0\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-09-02T12:07:04.472Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "F:\webdev\ecomm-react\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"F:\\webdev\\ecomm-react\\functions\" for Cloud Functions..."}}
+[debug] [2022-09-02T12:07:04.612Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-09-02T12:07:08.591Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-02T12:07:08.592Z] Building nodejs source
+[debug] [2022-09-02T12:07:08.592Z] Analyzing nodejs backend spec
+[debug] [2022-09-02T12:07:08.592Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-02T12:07:12.059Z] Serving at port 9005
+
+[debug] [2022-09-02T12:07:14.503Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-02T12:07:14.507Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5001/ecomm-react-2ca49/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/ecomm-react-2ca49/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

@@ -8,9 +8,10 @@ export const getCartTotal = (total) => total?.reduce(function (amount, item) { r
 export const ContextProvider = (props) => {
     const [user, setUser] = useState(null)
     const [cart, setCart] = useState(null)
+    const [search, setSearch] = useState(null)
 
     return (
-        <Context.Provider value={{userState: [user, setUser], cartState: [cart, setCart]}}>
+        <Context.Provider value={{userState: [user, setUser], cartState: [cart, setCart], searchState: [search, setSearch]}}>
             {props.children}
         </Context.Provider>
     )

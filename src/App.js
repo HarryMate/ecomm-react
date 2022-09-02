@@ -19,16 +19,17 @@ import { Elements } from '@stripe/react-stripe-js';
 import Orders from './Components/Orders';
 import Burger from './Components/BurgerMenu/Burger';
 import Menu from './Components/BurgerMenu/Menu';
+import Search from './Components/SearchResults';
 
 const promise = loadStripe('pk_test_51LSM75CYMVfwFlDLED9OUCiKG7yRY4zh3HfgzL14UW2qxvbHdftggyAaazyJjvXaHljA12L5i9hIDPluB7XYySB500zriQs3pM')
 
 function App() {
   const { userState } = useContext(Context)
   const [user, setUser] = userState
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
 
   //Code from https://thewebdev.info/2021/11/20/how-to-conditionally-render-items-based-on-viewport-size-in-react/
-  const [size, setSize] = useState(window.innerWidth > 650)
+  const [size, setSize] = useState(window.innerWidth < 650)
 
   const updateMedia = () => {
     setSize(window.innerWidth < 650)
@@ -129,6 +130,19 @@ function App() {
             </>
           }>
           </Route>
+          <Route path='/search' element={
+            <>
+              {size ?
+                <>
+                  <Burger open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} />
+                </>
+                :
+                <Header />
+              }
+              <Search />
+            </>
+          }></Route>
           <Route path='/admin' element={
             <>
               <AdminHeader />

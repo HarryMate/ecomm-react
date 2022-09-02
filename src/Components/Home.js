@@ -7,8 +7,8 @@ const Home = () => {
     const [product, setProduct] = useState([])
 
     useEffect(() => {
-        //Grabbing 5 records from the products table and putting each into an array in a state
-        const getProducts = db.collection('products').limit(5).onSnapshot(snapshot => {
+        //Grabbing the products table and putting each into an array in a state
+        const getProducts = db.collection('products').onSnapshot(snapshot => {
             setProduct(snapshot.docs.map(doc => ({
                 id: doc.id,
                 data: doc.data()

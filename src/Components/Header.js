@@ -6,12 +6,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { auth } from '../Firebase';
 import { useNavigate } from 'react-router-dom'
-import { db } from '../Firebase'
 
 const Header = () => {
-    const { userState, cartState } = useContext(Context)
-    const [cart, setCart] = cartState
+    const { userState, searchState } = useContext(Context)
     const [user, setUser] = userState
+    const [search, setSearch] = searchState
     const navigate = useNavigate()
 
     //Sign out the user and set the current user to NULL, then redirect to the login page
@@ -23,6 +22,13 @@ const Header = () => {
 
     const handleCart = async () => {
         navigate('/cart', { replace: true })
+    }
+
+    const searchProducts = (e) => {
+        e.preventDefault()
+
+        setSearch(search)
+        navigate('/search')
     }
 
     return (
@@ -37,7 +43,9 @@ const Header = () => {
                 </Link>
             }
             <div className='search'>
-                <input type="text" className='search_input' />
+                <form className='search_input' onSubmit={searchProducts}>
+                    <input type="text" className='search_input' onChange={e => setSearch(e.target.value)} />
+                </form>
                 <SearchIcon className='search_icon' />
             </div>
             {/* If there is a user logged in, show the logout button, otherwise show the login button */}
