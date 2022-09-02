@@ -31,37 +31,35 @@ const Product = ({ product, home, remove }) => {
     }
 
     return (
-        <>
-            <div className='product'>
-                <div className='info'>
-                    <p>{product.data.Name}</p>
-                    <strong className='price'>${product.data.Price}</strong>
-                    <div className="rating">
-                        {Array(product.data.Rating).fill().map((_, i) => (
-                            <p key={i}>🌟</p>
-                        ))}</div>
-                </div>
-                <img className='img' src={product.data.Image} alt={product.data.Title} />
-                {/* If on the home page show the Add to Basket Button*/}
-                {home
-                    ?
-                    <button className='button' onClick={handleBasket}>Add to Basket</button>
-                    :
-                    //If on the remove page, show the remove delete item button and checkbox
-                    remove ?
-                        <div className='remove'>
-                            <p>Remove?</p>
-                            <input type="checkbox" className='removeBox' onClick={setChecked} />
-                            <button className='button' onClick={handleDelete} disabled={disable} >Delete Item</button>
-                        </div>
-                        //If on the edit page, show the edit product button
-                        :
-                        <div className="edit">
-                            <button className='button' onClick={handleEdit}>Edit Product</button>
-                        </div>
-                }
+        <div className='product'>
+            <div className='info'>
+                <p>{product.data.Name}</p>
+                <strong className='price'>${product.data.Price}</strong>
+                <div className="rating">
+                    {Array(product.data.Rating).fill().map((_, i) => (
+                        <p key={i}>🌟</p>
+                    ))}</div>
             </div>
-        </>
+            <img className='img' src={product.data.Image} alt={product.data.Title} />
+            {/* If on the home page show the Add to Basket Button*/}
+            {home
+                ?
+                <button className='button' onClick={handleBasket}>Add to Basket</button>
+                :
+                //If on the remove page, show the remove delete item button and checkbox
+                remove ?
+                    <div className='remove'>
+                        <p>Remove?</p>
+                        <input type="checkbox" className='removeBox' onClick={setChecked} />
+                        <button className='button' onClick={handleDelete} disabled={disable} >Delete Item</button>
+                    </div>
+                    //If on the edit page, show the edit product button
+                    :
+                    <div className="edit">
+                        <button className='button' onClick={handleEdit}>Edit Product</button>
+                    </div>
+            }
+        </div>
     )
 }
 

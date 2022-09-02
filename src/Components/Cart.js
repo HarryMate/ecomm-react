@@ -38,7 +38,7 @@ const Cart = () => {
     }
 
     //Code from https://thewebdev.info/2021/11/20/how-to-conditionally-render-items-based-on-viewport-size-in-react/
-    const [size, setSize] = useState(window.innerWidth > 650)
+    const [size, setSize] = useState(window.innerWidth < 650)
 
     const updateMedia = () => {
         setSize(window.innerWidth < 650)
@@ -67,12 +67,12 @@ const Cart = () => {
                             </div>
                         ))}
                     </div>
-                    <h2 className='cart_subtotal_small'>Subtotal</h2>
+                    <h2>Subtotal</h2>
                     <Subtotal basket={cart} />
                 </div>
                 :
-                <div className='cart_large'>
-                    <div className="cartItems_large">
+                <div className={size ? 'cart_small' : 'cart_large'}>
+                    <div className={size ? 'cartItems_small' : "cartItems_large"}>
                         <h2>Your Cart</h2>
                         {/* Mapping through each element in the cart and adding a 'remove a basket' button for each */}
                         {cart?.map((item, index) => (
@@ -84,7 +84,7 @@ const Cart = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="subtotalRight">
+                    <div className={size ? 'subtotalRight_small' : "subtotalRight_large"}>
                         <h2>Subtotal</h2>
                         <Subtotal basket={cart} />
                     </div>

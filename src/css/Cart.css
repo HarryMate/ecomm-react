@@ -39,8 +39,12 @@
     justify-items: left;
 }
 
-.subtotalRight {
+.subtotalRight_large {
     width: 30%;
+}
+
+.subtotalRight_small {
+    width: 100%;
 }
 
 .cart_subtotal_small {
