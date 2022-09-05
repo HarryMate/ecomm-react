@@ -63,7 +63,7 @@ function App() {
               {size ?
                 <>
                   <Burger open={open} setOpen={setOpen} />
-                  <Menu open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={false} />
                 </>
                 :
                 <Header />
@@ -77,7 +77,7 @@ function App() {
               {size ?
                 <>
                   <Burger open={open} setOpen={setOpen} />
-                  <Menu open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={false} />
                 </>
                 :
                 <Header />
@@ -91,7 +91,7 @@ function App() {
               {size ?
                 <>
                   <Burger open={open} setOpen={setOpen} />
-                  <Menu open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={false} />
                 </>
                 :
                 <Header />
@@ -105,7 +105,7 @@ function App() {
               {size ?
                 <>
                   <Burger open={open} setOpen={setOpen} />
-                  <Menu open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={false} />
                 </>
                 :
                 <Header />
@@ -121,7 +121,7 @@ function App() {
               {size ?
                 <>
                   <Burger open={open} setOpen={setOpen} />
-                  <Menu open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={false} />
                 </>
                 :
                 <Header />
@@ -135,7 +135,7 @@ function App() {
               {size ?
                 <>
                   <Burger open={open} setOpen={setOpen} />
-                  <Menu open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={false} />
                 </>
                 :
                 <Header />
@@ -145,35 +145,70 @@ function App() {
           }></Route>
           <Route path='/admin' element={
             <>
-              <AdminHeader />
+              {size ?
+                <>
+                  <Burger open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={true} />
+                </>
+                :
+                <AdminHeader />
+              }
               <Dashboard />
             </>
           }>
           </Route>
           <Route path='/admin/add' element={
             <>
-              <AdminHeader />
+              {size ?
+                <>
+                  <Burger open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={true} />
+                </>
+                :
+                <AdminHeader />
+              }
               <Add />
             </>
           }>
           </Route>
           <Route path='/admin/remove' element={
             <>
-              <AdminHeader />
+              {size ?
+                <>
+                  <Burger open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={true} />
+                </>
+                :
+                <AdminHeader />
+              }
               <Remove />
             </>
           }>
           </Route>
           <Route path='/admin/edit' element={
             <>
-              <AdminHeader />
+              {size ?
+                <>
+                  <Burger open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={true} />
+                </>
+                :
+                <AdminHeader />
+              }
               <Edit />
             </>
           }>
           </Route>
           <Route path='/admin/editing' element={
             <>
-              <AdminHeader />
+              {size ?
+                <>
+                  <Burger open={open} setOpen={setOpen} />
+                  <Menu open={open} setOpen={setOpen} admin={true} />
+                </>
+                :
+                <AdminHeader />
+              }
               <Editing />
             </>
           }>

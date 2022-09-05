@@ -27,6 +27,15 @@ export const StyledMenu = styled.nav`
     color: #0D0C1D;
     text-decoration: none;
     transition: color 0.3s linear;
-    
-    
-  }`
+  }
+  
+  .menu_logout {
+    font-size: 2rem;
+    padding: 2rem 0;
+    font-weight: bold;
+    color: #0D0C1D;
+    text-decoration: none;
+    transition: color 0.3s linear;
+    cursor: pointer;
+  }
+  `

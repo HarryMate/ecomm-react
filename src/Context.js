@@ -9,9 +9,10 @@ export const ContextProvider = (props) => {
     const [user, setUser] = useState(null)
     const [cart, setCart] = useState(null)
     const [search, setSearch] = useState(null)
+    const [editing, setEditing] = useState(null)
 
     return (
-        <Context.Provider value={{userState: [user, setUser], cartState: [cart, setCart], searchState: [search, setSearch]}}>
+        <Context.Provider value={{userState: [user, setUser], cartState: [cart, setCart], searchState: [search, setSearch], editState: [editing, setEditing]}}>
             {props.children}
         </Context.Provider>
     )

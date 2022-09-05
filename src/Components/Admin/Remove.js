@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../../css/Admin/Remove.css'
-import { db } from '../../Firebase'
+import { auth, db } from '../../Firebase'
 import Product from '../Product'
 
 //This page is almost the same as the home page, the only difference is not passing a prop to the products so that code uses the remove code instead
 
 const Remove = () => {
   const [product, setProduct] = useState([])
+  const navigate = useNavigate()
+
+  //Check if the current user is an admin
+  auth.onAuthStateChanged((currentUser) => {
+    if (currentUser.email != 'admin@admin.com') {
+        navigate('/')
+    }
+})
 
   useEffect(() => {
     //Grabbing 5 records from the products table and putting each into an array in a useState

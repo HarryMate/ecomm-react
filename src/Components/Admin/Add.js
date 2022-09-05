@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../../css/Admin/Add.css'
-import { db } from '../../Firebase'
+import { auth, db } from '../../Firebase'
 import { addDoc, collection } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 
@@ -10,8 +10,14 @@ const Add = () => {
   const [Cost, setCost] = useState('')
   const [Rated, setRated] = useState()
   const [Image, setImage] = useState('')
-
   const navigate = useNavigate()
+
+  //Check if the current user is an admin
+  auth.onAuthStateChanged((currentUser) => {
+    if (currentUser.email != 'admin@admin.com') {
+        navigate('/')
+    }
+})
 
   //Grab all of the information from the states and place it into an object
   const handleSubmit = async (e) => {
@@ -27,7 +33,7 @@ const Add = () => {
       Image
     }
     //Add the object to the database
-    const docRef = await addDoc(collection(db, "products"), product)
+    db.collection("products").add(product)
     navigate('/admin')
   }
 

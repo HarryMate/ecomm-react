@@ -67,7 +67,7 @@ const Cart = () => {
                 {cart?.map((item, index) => (
                     <div className='singleProduct' key={index}>
                         <CartProduct
-                            product={item}
+                            product={item.data.product.data}
                         />
                         <button className='cartButton' onClick={() => removeFromBasket(index, item.id)}>Remove from Basket</button>
                     </div>
@@ -91,6 +91,7 @@ const Cart = () => {
                                 displayType={"text"}
                                 thousandSeparator={true}
                                 prefix={"$"}
+                                fixedDecimalScale={true}
                             />
                             <button onClick={e => navigate('/payment')}>Proceed to Checkout</button>
                         </div>

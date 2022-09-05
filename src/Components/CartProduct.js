@@ -1,18 +1,31 @@
 import React from 'react'
+import CurrencyFormat from 'react-currency-format'
 import '../css/CartProduct.css'
 
 const CartProduct = ({ product }) => {
     return (
         <div className='cartProduct'>
-            <img className='cart_image' src={product.data.product.data.Image} />
+            <img className='cart_image' src={product.Image} />
             <div className='cart_info'>
-                <p>{product.data.product.data.Name}</p>
+                <p>{product.Name}</p>
                 <div className="cart_rating">
-                    {Array(product.data.product.data.Rating).fill().map((_, i) => (
+                    {Array(product.Rating).fill().map((_, i) => (
                         <p key={i}>🌟</p>
                     ))}
                 </div>
-                <div className='cart_price'>${product.data.product.data.Price}</div>
+                <CurrencyFormat
+                    renderText={(value) => (
+                        <strong className='cart_price'>
+                            {value}
+                        </strong>
+                    )}
+                    decimalScale={2}
+                    value={product.Price}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={"$"}
+                    fixedDecimalScale={true}
+                />
             </div>
         </div>
     )

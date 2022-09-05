@@ -5,6 +5,12 @@
     font-size: 30px;
 }
 
+.dash_small {
+    line-height: 100px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
 .dash_revenue {
     background-color: rgb(7, 248, 7);
     width: 50%;
@@ -18,4 +24,21 @@
     height: 200px;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+.dash_revenue_small {
+    background-color: rgb(7, 248, 7);
+    width: 75%;
+    height: 200px;
+    margin: auto;
+
+}
+
+.dash_numOrders_small {
+    background-color: #4a8ce2;
+    width: 75%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }

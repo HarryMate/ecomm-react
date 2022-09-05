@@ -3,12 +3,14 @@ import { Context } from '../Context';
 import { db } from '../Firebase'
 import '../css/Product.css'
 import { useNavigate } from 'react-router-dom'
+import CurrencyFormat from 'react-currency-format';
 
 const Product = ({ product, home, remove }) => {
     const navigate = useNavigate()
     const [disable, setDisable] = useState(true)
-    const { userState, cartState } = useContext(Context)
+    const { userState, editState } = useContext(Context)
     const [user, setUser] = userState
+    const [edit, setEdit] = editState
 
     //Add the item selected to the basket
     const handleBasket = () => {
@@ -28,14 +30,27 @@ const Product = ({ product, home, remove }) => {
 
     //When the Edit Product button is clicked it will take them to a form page and pass in the values of the product
     const handleEdit = () => {
-        navigate('/admin/editing', { state: { product: product } })
+        setEdit(product)
+        navigate('/admin/editing')
     }
 
     return (
         <div className='product'>
             <div className='info'>
                 <p>{product.data.Name}</p>
-                <strong className='price'>${product.data.Price}</strong>
+                <CurrencyFormat
+                    renderText={(value) => (
+                        <strong className='price'>
+                            {value}
+                        </strong>
+                    )}
+                    decimalScale={2}
+                    value={product.data.Price}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={"$"}
+                    fixedDecimalScale={true}
+                />
                 <div className="rating">
                     {Array(product.data.Rating).fill().map((_, i) => (
                         <p key={i}>🌟</p>
@@ -52,7 +67,7 @@ const Product = ({ product, home, remove }) => {
                     <div className='remove'>
                         <p>Remove?</p>
                         <input type="checkbox" className='removeBox' onClick={setChecked} />
-                        <button className='button' onClick={handleDelete} disabled={disable} >Delete Item</button>
+                        <button className='button' onClick={handleDelete} disabled={disable} >Remove</button>
                     </div>
                     //If on the edit page, show the edit product button
                     :

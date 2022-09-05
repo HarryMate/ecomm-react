@@ -27,7 +27,7 @@ const Order = ({ order, id }) => {
                 <p className='order_id'>ORDER # {id}</p>
             </div>
             {order.cart?.map((item, index) => (
-                <CartProduct product={item} key={index} />
+                <CartProduct product={item.data.product.data} key={index} />
             ))}
         </div>
     )
