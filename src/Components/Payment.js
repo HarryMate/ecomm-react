@@ -116,6 +116,7 @@ const Payment = () => {
             window.removeEventListener("resize", updateMedia)
         }
     }, [])
+    //End Code
 
     return (
         <div className='payment'>

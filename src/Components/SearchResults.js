@@ -9,7 +9,6 @@ const SearchResults = () => {
   const [product, setProduct] = useState([])
   const { searchState } = useContext(Context)
   const [search, setSearch] = searchState
-  const navigate = useNavigate()
 
   //If the user searches from this page, it won't work, as they're already on this route, so it can't load it
   useEffect(() => {

@@ -589,3 +589,194 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
 [debug] [2022-09-02T13:12:39.003Z] [worker-us-central1-api-64938870-ae4b-4093-a41d-1e6807564e99]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-64938870-ae4b-4093-a41d-1e6807564e99]: IDLE"}}
 [debug] [2022-09-02T13:12:39.003Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-09-02T13:12:50.781Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-02T13:12:50.781Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-02T13:12:50.781Z] Accepted request POST /ecomm-react-2ca49/us-central1/api/payments/create?total=672896 --> us-central1-api
+[debug] [2022-09-02T13:12:50.781Z] [worker-pool] submitWork(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-api)"}}
+[debug] [2022-09-02T13:12:50.781Z] [worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: BUSY"}}
+[debug] [2022-09-02T13:12:50.782Z] [runtime-status] [46840] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [46840] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-09-02T13:12:50.782Z] [runtime-status] [46840] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [46840] Running api in signature http"}}
+[debug] [2022-09-02T13:12:50.783Z] [runtime-status] [46840] Listening to port: \\?\pipe\fire_emu_84b8309b964c5f44 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [46840] Listening to port: \\\\?\\pipe\\fire_emu_84b8309b964c5f44"}}
+[debug] [2022-09-02T13:12:50.885Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-02T13:12:50.885Z] [functions] Got req.url=/ecomm-react-2ca49/us-central1/api/payments/create?total=672896, mapping to path=/payments/create?total=672896 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/ecomm-react-2ca49/us-central1/api/payments/create?total=672896, mapping to path=/payments/create?total=672896"}}
+[debug] [2022-09-02T13:12:50.885Z] [runtime-status] [46840] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [46840] Ephemeral server handling POST request"}}
+[info] >  <<< Total >>> 672896 {"user":"<<< Total >>> 672896","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m <<< Total >>> 672896"}}
+[debug] [2022-09-02T13:12:50.886Z] [runtime-status] [46840] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [46840] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-09-02T13:12:51.205Z] [worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: IDLE"}}
+[debug] [2022-09-02T13:12:51.205Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-09-02T13:30:55.348Z] File F:\webdev\ecomm-react\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File F:\\webdev\\ecomm-react\\functions\\index.js changed, reloading triggers"}}
+[debug] [2022-09-02T13:30:56.364Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-09-02T13:30:59.055Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-02T13:30:59.055Z] Building nodejs source
+[debug] [2022-09-02T13:30:59.055Z] Analyzing nodejs backend spec
+[debug] [2022-09-02T13:30:59.056Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-02T13:30:59.314Z] Serving at port 9005
+
+[debug] [2022-09-02T13:30:59.485Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-02T13:30:59.489Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2022-09-02T13:30:59.497Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2022-09-02T13:30:59.497Z] [worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: FINISHING"}}
+[debug] [2022-09-02T13:30:59.497Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2022-09-02T13:30:59.497Z] [worker-us-central1-api-64938870-ae4b-4093-a41d-1e6807564e99]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-64938870-ae4b-4093-a41d-1e6807564e99]: FINISHING"}}
+[debug] [2022-09-02T13:30:59.503Z] [worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: exited"}}
+[debug] [2022-09-02T13:30:59.503Z] [worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-b2c9603a-fb1a-4790-9836-02b27905e3bf]: FINISHED"}}
+[debug] [2022-09-02T13:30:59.503Z] [worker-us-central1-api-64938870-ae4b-4093-a41d-1e6807564e99]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-64938870-ae4b-4093-a41d-1e6807564e99]: exited"}}
+[debug] [2022-09-02T13:30:59.504Z] [worker-us-central1-api-64938870-ae4b-4093-a41d-1e6807564e99]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-64938870-ae4b-4093-a41d-1e6807564e99]: FINISHED"}}
+[debug] [2022-09-02T13:31:17.409Z] File F:\webdev\ecomm-react\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File F:\\webdev\\ecomm-react\\functions\\index.js changed, reloading triggers"}}
+[debug] [2022-09-02T13:31:18.423Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-09-02T13:31:20.969Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-02T13:31:20.969Z] Building nodejs source
+[debug] [2022-09-02T13:31:20.969Z] Analyzing nodejs backend spec
+[debug] [2022-09-02T13:31:20.972Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-02T13:31:21.218Z] Serving at port 9005
+
+[debug] [2022-09-02T13:31:21.388Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-02T13:31:21.392Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2022-09-02T13:32:57.251Z] Received signal SIGHUP 1
+[debug] [2022-09-05T12:12:56.622Z] ----------------------------------------------------------------------
+[debug] [2022-09-05T12:12:56.623Z] Command:       F:\nodejs\node.exe C:\Users\Harry\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-09-05T12:12:56.623Z] CLI Version:   11.8.0
+[debug] [2022-09-05T12:12:56.623Z] Platform:      win32
+[debug] [2022-09-05T12:12:56.624Z] Node Version:  v16.14.2
+[debug] [2022-09-05T12:12:56.625Z] Time:          Mon Sep 05 2022 13:12:56 GMT+0100 (British Summer Time)
+[debug] [2022-09-05T12:12:56.625Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-05T12:12:56.628Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-09-05T12:12:56.774Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-05T12:12:56.774Z] > authorizing via signed-in user (heychmt@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project ecomm-react-2ca49. This may result in unexpected behavior. 
+[debug] [2022-09-05T12:12:56.792Z] [hub] writing locator at C:\Users\Harry\AppData\Local\Temp\hub-ecomm-react-2ca49.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, eventarc\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-09-05T12:12:57.019Z] defaultcredentials: writing to file C:\Users\Harry\AppData\Roaming\firebase\heychmt_gmail_com_application_default_credentials.json
+[debug] [2022-09-05T12:12:57.020Z] Setting GAC to C:\Users\Harry\AppData\Roaming\firebase\heychmt_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Harry\\AppData\\Roaming\\firebase\\heychmt_gmail_com_application_default_credentials.json"}}
+[debug] [2022-09-05T12:12:57.021Z] > refreshing access token with scopes: []
+[debug] [2022-09-05T12:12:57.022Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-09-05T12:12:57.022Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-05T12:12:57.504Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-09-05T12:12:57.504Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-05T12:12:58.884Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig [none]
+[debug] [2022-09-05T12:12:58.992Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-09-05T12:12:58.992Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-09-05T12:12:59.170Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig 200
+[debug] [2022-09-05T12:12:59.170Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecomm-react-2ca49/adminSdkConfig {"projectId":"ecomm-react-2ca49","databaseURL":"https://ecomm-react-2ca49-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"ecomm-react-2ca49.appspot.com","locationId":"europe-west"}
+[debug] [2022-09-05T12:12:59.185Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-09-05T12:12:59.185Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-09-05T12:12:59.186Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Harry\\.cache\\firebase\\emulators\\ui-v1.9.0\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Harry\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.9.0\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-09-05T12:12:59.320Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "F:\webdev\ecomm-react\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"F:\\webdev\\ecomm-react\\functions\" for Cloud Functions..."}}
+[debug] [2022-09-05T12:12:59.455Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-09-05T12:13:04.126Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-05T12:13:04.127Z] Building nodejs source
+[debug] [2022-09-05T12:13:04.127Z] Analyzing nodejs backend spec
+[debug] [2022-09-05T12:13:04.128Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-09-05T12:13:09.799Z] Serving at port 9005
+
+[debug] [2022-09-05T12:13:12.691Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-09-05T12:13:12.695Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://localhost:5001/ecomm-react-2ca49/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/ecomm-react-2ca49/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

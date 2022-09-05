@@ -12,7 +12,6 @@ import Remove from './Components/Admin/Remove';
 import Edit from './Components/Admin/Edit';
 import AdminHeader from './Components/Admin/Header'
 import Editing from './Components/Admin/Editing';
-import CartWait from './Components/CartWait';
 import Payment from './Components/Payment';
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js';
@@ -20,6 +19,7 @@ import Orders from './Components/Orders';
 import Burger from './Components/BurgerMenu/Burger';
 import Menu from './Components/BurgerMenu/Menu';
 import Search from './Components/SearchResults';
+import Cart from './Components/Cart';
 
 const promise = loadStripe('pk_test_51LSM75CYMVfwFlDLED9OUCiKG7yRY4zh3HfgzL14UW2qxvbHdftggyAaazyJjvXaHljA12L5i9hIDPluB7XYySB500zriQs3pM')
 
@@ -41,7 +41,7 @@ function App() {
       window.removeEventListener("resize", updateMedia)
     }
   }, [])
-  
+  //End Code
 
   //Check if the state has a user, if not then check if there is one logged in on firebase, if there is then change the state
   if (!user) {
@@ -96,7 +96,7 @@ function App() {
                 :
                 <Header />
               }
-              <CartWait />
+              <Cart />
             </>
           }>
           </Route>

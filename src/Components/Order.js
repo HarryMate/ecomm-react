@@ -17,6 +17,7 @@ const Order = ({ order, id }) => {
             window.removeEventListener("resize", updateMedia)
         }
     }, [])
+    //End Code
 
     return (
         <div className='order'>

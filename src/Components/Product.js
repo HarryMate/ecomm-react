@@ -10,6 +10,7 @@ const Product = ({ product, home, remove }) => {
     const { userState, cartState } = useContext(Context)
     const [user, setUser] = userState
 
+    //Add the item selected to the basket
     const handleBasket = () => {
         db.collection('users').doc(user?.uid).collection('basket').add({ product })
     }

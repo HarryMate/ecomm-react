@@ -7,14 +7,13 @@ const stripe = require('stripe')('sk_test_51LSM75CYMVfwFlDLyPGLU6w32U5neU7wn4pmb
 const app = express()
 
 //Middleware
-app.use(cors({origin: '*'}))
+app.use(cors())
 app.use(express.json())
 
 //API Routes
 app.post('/payments/create', async (request, response) => {
     //Getting the requested total as an Int
     const total = parseInt(request.query.total)
-    console.log('<<< Total >>>', total)
     //Create the payment intent so that Stripe knows the correct payment comes through
     const paymentIntent = await stripe.paymentIntents.create({
         amount: total,
